@@ -1,0 +1,44 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.4.RELEASE' apply false
+    id 'io.jmix' version '0.1.3' apply false
+}
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven {
+            url System.getenv('HAULMONT_REPOSITORY_URL')
+            credentials {
+                username System.getenv('HAULMONT_REPOSITORY_USER')
+                password System.getenv('HAULMONT_REPOSITORY_PASSWORD')
+            }
+        }
+    }
+
+    group = 'com.company.sample'
+    version = '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.jmix'
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+
+        runtimeOnly 'org.hsqldb:hsqldb'
+
+        testImplementation('org.springframework.boot:spring-boot-starter-test') {
+            exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+        }
+    }
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}

@@ -1,0 +1,5 @@
+rootProject.name = 'sample'
+
+include 'sample-app'
+include 'sample-data'
+include 'sample-ui'
