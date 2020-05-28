@@ -1,5 +1,6 @@
 
 dependencies {
+    implementation project(':sample-data')
     implementation 'io.jmix.starter.ui:jmix-starter-ui'
     implementation 'io.jmix.ui-widgets-compiled:jmix-ui-widgets-compiled'
     implementation 'io.jmix.ui-themes-compiled:jmix-ui-themes-compiled'

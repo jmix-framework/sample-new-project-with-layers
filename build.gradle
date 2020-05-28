@@ -1,17 +1,13 @@
 plugins {
     id 'org.springframework.boot' version '2.2.4.RELEASE' apply false
-    id 'io.jmix' version '0.1.4' apply false
+    id 'io.jmix' version '0.1.7' apply false
 }
 
 allprojects {
     repositories {
-        mavenLocal()
+        mavenCentral()
         maven {
-            url System.getenv('HAULMONT_REPOSITORY_URL')
-            credentials {
-                username System.getenv('HAULMONT_REPOSITORY_USER')
-                password System.getenv('HAULMONT_REPOSITORY_PASSWORD')
-            }
+            url 'https://nexus.jmix.io/repository/public'
         }
     }
 
