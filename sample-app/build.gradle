@@ -5,3 +5,7 @@ dependencies {
     implementation project(':sample-ui')
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
+
+bootJar {
+    mainClassName = 'com.company.sample.app.SampleApplication'
+}

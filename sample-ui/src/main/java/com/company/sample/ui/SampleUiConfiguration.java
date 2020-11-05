@@ -2,7 +2,7 @@ package com.company.sample.ui;
 
 import io.jmix.core.annotation.JmixModule;
 import io.jmix.core.impl.scanning.AnnotationScanMetadataReaderFactory;
-import io.jmix.ui.JmixUiConfiguration;
+import io.jmix.ui.UiConfiguration;
 import io.jmix.ui.sys.ActionsConfiguration;
 import io.jmix.ui.sys.UiControllersConfiguration;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +15,7 @@ import java.util.Collections;
 
 @Configuration
 @ComponentScan
-@JmixModule(dependsOn = {JmixUiConfiguration.class})
+@JmixModule(dependsOn = {UiConfiguration.class})
 @PropertySource(name = "com.company.sample.ui", value = "classpath:/com/company/sample/ui/module.properties")
 public class SampleUiConfiguration {
 
