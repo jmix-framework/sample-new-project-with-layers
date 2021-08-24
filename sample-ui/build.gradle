@@ -1,7 +1,14 @@
 
+jmix {
+    entitiesEnhancing {
+        enabled = false
+    }
+}
+
 dependencies {
     implementation project(':sample-data')
     implementation 'io.jmix.ui:jmix-ui-starter'
     implementation 'io.jmix.ui:jmix-ui-widgets-compiled'
     implementation 'io.jmix.ui:jmix-ui-themes-compiled'
+    implementation 'io.jmix.security:jmix-security-ui-starter'
 }

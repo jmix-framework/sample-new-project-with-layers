@@ -1,4 +1,6 @@
 
 dependencies {
-    implementation 'io.jmix.data:jmix-data-starter'
+    implementation 'io.jmix.data:jmix-eclipselink-starter'
+    implementation 'io.jmix.security:jmix-security-starter'
+    implementation 'io.jmix.security:jmix-security-data-starter'
 }
