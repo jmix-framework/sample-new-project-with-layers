@@ -20,7 +20,7 @@ subprojects {
     apply plugin: 'io.jmix'
 
     jmix {
-        bomVersion = '1.0.1'
+        bomVersion = '1.0.2'
     }
 
     dependencies {
