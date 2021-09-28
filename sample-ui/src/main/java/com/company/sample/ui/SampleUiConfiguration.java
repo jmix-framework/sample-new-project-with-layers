@@ -1,5 +1,6 @@
 package com.company.sample.ui;
 
+import com.company.sample.data.SampleDataConfiguration;
 import io.jmix.core.annotation.JmixModule;
 import io.jmix.core.impl.scanning.AnnotationScanMetadataReaderFactory;
 import io.jmix.ui.UiConfiguration;
@@ -15,7 +16,7 @@ import java.util.Collections;
 
 @Configuration
 @ComponentScan
-@JmixModule(dependsOn = {UiConfiguration.class})
+@JmixModule(dependsOn = {UiConfiguration.class, SampleDataConfiguration.class})
 @PropertySource(name = "com.company.sample.ui", value = "classpath:/com/company/sample/ui/module.properties")
 public class SampleUiConfiguration {
 
